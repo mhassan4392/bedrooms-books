@@ -1,16 +1,22 @@
 // navbar function
 
+let indexPage = document.querySelector('.index-page');
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("main-header").classList.add('navbar-scroll');
-    document.getElementById("main-header").classList.remove('navbar-first');
+    if(indexPage){
+      document.getElementById("main-header").classList.add('navbar-scroll');
+      document.getElementById("main-header").classList.remove('navbar-first');
+    }
     // document.querySelector('.brand-img').setAttribute('src','images/logo.png');
     // document.getElementById("myBtn").style.display = "block";
   } else {
-    document.getElementById("main-header").classList.remove('navbar-scroll');
-    document.getElementById("main-header").classList.add('navbar-first');
+    if(indexPage){
+      document.getElementById("main-header").classList.remove('navbar-scroll');
+      document.getElementById("main-header").classList.add('navbar-first');
+    }
     // document.querySelector('.brand-img').setAttribute('src','images/logo.png');
     // document.getElementById("myBtn").style.display = "none";
   }
@@ -39,6 +45,31 @@ if(closeNavbarBtn){
 }
 
 
+let sendMsgCard = document.querySelector('.send-msg .card');
+let consult = document.querySelector('.consult-btn');
+let consultCloseBtn = document.querySelector('.consult-close');
+
+if(consult){
+  consult.addEventListener('click', function(){
+    sendMsgCard.classList.toggle('show');
+  })
+}
+
+if(consultCloseBtn){
+  consultCloseBtn.addEventListener('click', function(){
+    sendMsgCard.classList.remove('show');
+  })
+}
+
+
+
+
+
+
+
+
+
+
 
 
 //showcase slider
@@ -62,8 +93,12 @@ function startSlide() {
   sliderImages[0].style.display = "block";
 }
 
-arrowLeft.addEventListener('click', slideLeft);
-arrowRight.addEventListener('click', slideRight);
+if(arrowLeft){
+  arrowLeft.addEventListener('click', slideLeft);
+}
+if(arrowRight){
+  arrowRight.addEventListener('click', slideRight);
+}
 
 // Show prev
 function slideLeft() {
@@ -100,21 +135,3 @@ startSlide();
 setInterval(slides, 15000);
 
 }
-
-
-let sendMsgCard = document.querySelector('.send-msg .card');
-let consult = document.querySelector('.consult-btn');
-let consultCloseBtn = document.querySelector('.consult-close');
-
-if(consult){
-  consult.addEventListener('click', function(){
-    sendMsgCard.classList.toggle('show');
-  })
-}
-
-if(consultCloseBtn){
-  consultCloseBtn.addEventListener('click', function(){
-    sendMsgCard.classList.remove('show');
-  })
-}
-
