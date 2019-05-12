@@ -1,0 +1,369 @@
+// slider section
+#slider,
+    .wrap,
+    .slide-content {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 80vh;
+    
+    }
+
+    .wrap {
+    position: relative;
+    }
+
+    .slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-duration: 1s;
+    }
+
+    .slide1{
+        background-image: url('../images/image1.jpg');
+    }
+
+    .slide2{
+        background-image: url('../images/image2.jpg');
+    }
+
+    .slide3{
+        background-image: url('../images/image3.jpg');
+    }
+
+    .slide4{
+        background-image: url('../images/image4.jpg');
+    }
+
+    .slider-header{
+        animation-delay: 1s;
+        animation-duration: 1s;
+    }
+    .slider-text{
+        animation-delay: 1.5s;
+        animation-duration: 1s;
+    }
+
+    .btn{
+        animation-delay: 1.3s;
+        animation-duration: 1s;
+    }
+    span{
+        animation-delay: 1s;
+        animation-duration: 1s;
+    }
+
+
+
+    .slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    img{
+        animation-delay: 1.1s;
+        animation-duration: 1s;
+    }
+    }
+
+     
+
+    .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 5px 10px;
+    background: rgba($primary-clr, 0.5);
+    color: white;
+    z-index: 33;
+    
+    &:hover{
+        background: rgba($primary-clr, 1.0)
+    }
+    }
+
+    #left-arrow {
+        left: 10px;
+    }
+
+    #right-arrow {
+        right: 10px;
+    }
+
+
+    
+
+    .slider-col-1{
+        margin-left: 100px;
+    }
+
+    .slider-btns{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    }
+
+    .slider-btn-1,.slider-btn-2{
+    padding: 3px;
+    margin: 10px;
+    cursor: pointer;
+    }
+
+
+
+
+    // what do we do section
+    #what-do-we-do{
+        background: url('../images/homeBrandsBG.jpg') no-repeat center center;
+    }
+
+
+
+    // contact section
+    // conact section
+#contact{
+    color: $secondary-clr;
+
+    li{
+        list-style-type: none;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    i{
+        margin-right: 10px;
+        padding-top: 5px;
+    }
+}
+
+
+
+// newsletter section
+#newsLetter{
+    position: relative;
+    color: $secondary-clr;
+    padding: 100px 0;
+    background-image: url('../images/newLetter-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .newsletter-img-1,.newsletter-img-2{
+        position: absolute;
+    }
+    .newsletter-img-1{
+        top: 30%;
+        left: 0;
+    }
+    .newsletter-img-2{
+        top: 30%;
+        right: 0;
+    }
+
+    .subscribe-input{
+        border-radius: 100px 0 0 100px;
+        background-image: url('../images/email-logo.png');
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: 40px;
+        padding-left: 70px;
+        background-position-x: 3%;
+    }
+
+    button{
+        border-radius: 0 100px 100px 0;
+    }
+}
+
+
+#showcase{
+    background-image: url('../images/showcase-bg.jpg');
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20vh;
+
+    .showcase-bg-clr{
+        position:  absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba($primary-clr, 0.4);
+    }
+
+    .form-search-btn{
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+
+
+    h1{
+        width: 100%;
+        font-size: 2rem;
+        color: $secondary-clr;
+        margin-bottom: 20px;
+    }
+}
+
+
+// latest blog section
+#latest-blog{
+    .card{
+        .card-title{
+            a{
+                color: $primary-clr;
+                @include easeOut(0.5s);
+
+                &:hover{
+                    color: $main-clr;
+                    @include easeOut(0.5s);
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .dark-teal-btn{
+            position: absolute;
+            right: -15px;
+            bottom: 7px;
+        }
+    }
+}
+
+
+
+// consult section
+#consult{
+    padding: 10px 85px 8px 8px;
+    background: #181b1f;
+    width: 250px;
+    position: fixed;
+    z-index: 99;
+    bottom: 20px;
+    left: 20px;
+    .card{
+        position: absolute;
+        border: none;
+        bottom: 0;
+        width: 233px;
+        transform: translate3d(-150%,0,0);
+        @include easeOut(0.5s);
+        &.show{
+            transform: translate3d(0,0,0);
+            @include easeOut(0.5s);
+        }
+
+        .consult-close{
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 2px;
+            @include easeOut(0.5s);
+
+            &:hover{
+                color: $main-clr;
+                @include easeOut(0.5s);
+            }
+        }
+    }
+    div{
+        position: relative;
+        cursor: pointer;
+        img{
+            position: absolute;
+            top: -21px;
+            right: -75px;
+            width: 64px;
+            border-radius: 50%;
+            border: 2px solid #181b1f;
+        }
+        small{
+            .chat-with-us{
+                color: $secondary-clr;
+                font-weight: bold;
+                &:hover{
+                    color: $main-clr;
+                }
+            }
+            a{
+                color: $secondary-clr;
+                font-weight: bold;
+                font-size: 0.8rem;
+                @include easeOut(0.5s);
+
+                &:hover{
+                    color:$main-clr;
+                    text-decoration: none;
+                    @include easeOut(0.5s);
+                }
+            }
+        }
+    }
+}
+
+
+// latest article section
+#latest-articles{
+    .articles-grid{
+        display: grid;
+        grid-gap: 1rem;
+        .article-col{
+            position: relative;
+            cursor: pointer;
+
+            &:hover{
+                @include easeOut(0.5s);
+                .article-bg-clr{
+                    display: block;
+                    @include easeOut(0.5s);
+                }
+                .article-inner{
+                    display: block;
+                    @include easeOut(0.5s);
+                }
+            }
+
+            .article-bg-clr{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba($main-clr, 0.7);
+                @include easeOut(0.5s);
+                display: none;
+            }
+
+            .article-inner{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                @include easeOut(0.5s);
+                display: none;
+
+                div{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                }
+            }
+        }
+    }
+}

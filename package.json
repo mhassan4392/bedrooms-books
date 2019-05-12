@@ -1,0 +1,17 @@
+{
+  "name": "bedroombooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://mhassan4392.github.io/bedroom-books",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Muhammad Hassa",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.12.0"
+  }
+}

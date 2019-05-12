@@ -1,0 +1,43 @@
+
+// medium size
+@include mediaMd{
+    #latest-articles{
+        .articles-grid{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+// small size
+@include mediaSm{
+    #latest-articles{
+        .articles-grid{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .navbar-brand{
+        margin-left: 20px;
+    }
+    .navbar-btn{
+        margin-right: 20px;
+    }
+}
+
+// large size
+@include mediaLg{
+    #latest-articles{
+        .articles-grid{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+// extra large size
+@include mediaXl{
+    #latest-articles{
+        .articles-grid{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

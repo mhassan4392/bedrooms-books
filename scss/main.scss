@@ -1,0 +1,23 @@
+// import partials
+@import 'config';
+@import 'header';
+@import 'others';
+@import 'footer';
+@import 'mobile';
+
+
+// full document settings
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.slash{
+    width: 100px;
+    height: 2.3px;   
+}

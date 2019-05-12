@@ -1,0 +1,150 @@
+// bottom footer of the document
+
+#main-footer{
+    #footer-top{
+        background: url('../images/footBG.jpg') no-repeat center;
+        background-size: cover;
+        padding: 40px 0;
+        color: $secondary-clr;
+        // color: $primary-clr;
+
+        .contact-info{
+            li{
+                margin-bottom: 15px;
+                div{
+                    font-size: 1.1rem;
+                }
+                .fas{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        
+        header{
+            border-bottom: 1px solid white;
+            margin-bottom: 30px;
+            h4{
+                color: white;
+                font-size: 1rem;
+            }
+        }
+        .aboutus-desc{
+            font-size: 1rem;
+            color: $secondary-clr;
+        }
+
+        .footer-brand-img{
+            width: 130px;
+        }
+        
+        h4{
+            font-size: 1rem;
+            color: $secondary-clr;
+            font-weight: 600;
+            a{
+                color: $secondary-clr;
+                &:hover{
+                    color: $main-clr;
+                    text-decoration: none;
+                }
+            }
+        }
+        ul{
+            li{
+                list-style-type: none;
+                font-size: 0.9rem;
+                h4{
+                    font-weight: 600;
+                    a{
+                        color: white !important;
+                    }
+                }
+                a{
+                    color: $secondary-clr;
+                    @include easeOut(0.5s);
+                    &:hover{
+                        color: $main-clr;
+                        text-decoration: none;
+                        @include easeOut(0.5s);
+                    }
+                }
+            }
+        }
+
+        .latest-article-grid{
+            display: flex;
+            align-items: center;
+            // grid-template-columns: 15% 70%;
+            margin-bottom: 20px;
+
+            .bg-image{
+                min-width: 70px;
+                height: 70px;
+                margin-right: 10px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow-x: hidden;
+            }
+
+            .bg-image-1{
+                background-image: url('../images/latest-article-1.jpg');
+            }
+            .bg-image-2{
+                background-image: url('../images/latest-article-2.jpg');
+            }
+            .bg-image-3{
+                background-image: url('../images/latest-article-3.jpg');
+            }
+            .bg-image-4{
+                background-image: url('../images/latest-article-4.jpg');
+            }
+
+            h4{
+                font-size: 0.9rem;
+                padding: 0;
+                margin: 0;
+            }
+            p{
+                font-size: 0.8rem;
+                padding: 0;
+                margin: 0;
+                line-height: 1rem;
+            }
+        }
+    }
+    #footer-bottom{
+        a{
+            color: $primary-clr;
+        }
+        background: #000;
+        .footer-logo{
+            img{
+                width: 100px;
+                height: 70px;
+            }
+        }
+        small{
+            font-size: 0.7rem;
+        }
+    
+    }
+}
+
+
+
+
+
+
+
+
+.social-media-icons{
+    a{
+        color: white;
+        margin-right: 12px;
+        font-size: 1.4rem;
+        &:hover{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
